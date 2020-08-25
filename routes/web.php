@@ -89,6 +89,7 @@ Route::get('/login', function () {
 Route::get('/testimonial', function () {
     return view('mainpage.testimonial');
 });
+
 Route::get('/team', function () {
     return view('mainpage.team');
 });
@@ -110,11 +111,11 @@ Route::get('/ven1', function () {
 Route::get('/chat', function () {
     return view('mainpage.chat');
 });
-Route::get('/vendor1', function () {
-    return view('profile.vendor1');
-});
+Route::get('/vendor', function () {
+    return view('vendor');
+})->middleware('verified' ) ;
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/vendor', 'HomeController@index')->name('vendor');

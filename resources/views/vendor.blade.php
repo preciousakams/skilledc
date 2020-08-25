@@ -1,5 +1,7 @@
-<x-layout>
-    <x-header></x-header>
+@extends('layouts.app')
+
+@section('content')
+    <!-- <x-header></x-header> -->
     <style>
         .container {
             color: #05132d;
@@ -36,4 +38,6 @@
 
     </div>
     <x-footer></x-footer>
-</x-layout>
+
+    @endsection
+    
