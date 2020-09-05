@@ -1,10 +1,14 @@
 <x-layout>
-
 <body>
     <style>
         .dropdown-menu {
-            background-color: #92802E;
-            color: #05132d;
+            background-color:#05132d;
+            
+        }
+
+        .dropdown-item {
+            color: #92802E;
+            font-size: 20px;
         }
 
         .navbar {
@@ -99,6 +103,12 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                               <a class="dropdown-item" href="{{ route('user.profile', Auth::user()->id )}}">
+                                    {{ __('View Profile') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('user.edit')}}">
+                                    {{ __('Update Profile') }}
+                                </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
@@ -116,8 +126,9 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+        @yield('content')
         </main>
     </div>
+
 </body>
 </x-layout>

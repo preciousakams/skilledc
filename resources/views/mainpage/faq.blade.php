@@ -1,5 +1,7 @@
-<x-layout>
-	<x-header></x-header>
+@extends('layouts.app')
+
+@section('content')
+	
 	<style>
 		section {
 			padding: 60px 0;
@@ -188,4 +190,4 @@
 	</div>
 
 	<x-footer></x-footer>
-</x-layout>
+@endsection

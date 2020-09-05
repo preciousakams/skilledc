@@ -1,5 +1,6 @@
-<x-layout>
-  <x-header></x-header>
+@extends('layouts.app')
+
+@section('content')
 
   <style>
   main{
@@ -309,4 +310,4 @@
 
   </main>
   <x-footer></x-footer>
-</x-layout>
+@endsection

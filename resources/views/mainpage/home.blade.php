@@ -1,6 +1,8 @@
-<x-layout>
-    <x-header></x-header>
+
+@extends('layouts.app')
+
+@section('content')
     <x-searchbar></x-searchbar>
     <x-quote></x-quote>
     <x-footer></x-footer>
-</x-layout>
+@endsection

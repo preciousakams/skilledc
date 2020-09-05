@@ -1,5 +1,7 @@
-<x-layout>
-    <x-header></x-header>
+@extends('layouts.app')
+
+@section('content')
+   
 
 <style>
     .tester_new {
@@ -95,4 +97,4 @@ h1{
 
 <x-footer></x-footer>
 
-</x-layout>
+@endsection

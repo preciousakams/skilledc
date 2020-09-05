@@ -29,6 +29,7 @@ s0.parentNode.insertBefore(s1,s0);
     <style>
         #page-container {
             background: linear-gradient(229.28deg, rgba(5, 19, 45, 0.39) 12.44%, rgba(134, 38, 150, 0.14) 29.04%, rgba(146, 128, 46, 0.37) 52.64%, rgba(5, 19, 45, 0.35) 74.56%);
+            
             backdrop-filter: blur(4px); 
         font-family: 'Times New Roman', Times, serif;
         height: 100%;

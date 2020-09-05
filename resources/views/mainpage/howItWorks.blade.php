@@ -1,5 +1,7 @@
-<x-layout>
-    <x-header></x-header>
+@extends('layouts.app')
+
+@section('content')
+  
     <style>
       .row{
           margin-top: 50px;
@@ -45,4 +47,4 @@
     </div>
 
     <x-footer></x-footer>
-</x-layout>
+@endsection

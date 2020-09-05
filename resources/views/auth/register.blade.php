@@ -102,7 +102,7 @@
 <div class="main1">
     <div class="head">
         <header>
-            <h1>SignUp <br> For An Account</h1>
+            <h1>Register <br> For An Account</h1>
             <h4>Welcome To The Future Of <br> Reliable Business Transactions</h4>
         </header>
     </div>

@@ -1,4 +1,6 @@
-<x-layout>
+@extends('layouts.app')
+
+@section('content')
 <style>
    .searcher {
       background-color: #05132d;
@@ -98,4 +100,4 @@
    //////////////////  
 </script>
 
-</x-layout>
+@endsection

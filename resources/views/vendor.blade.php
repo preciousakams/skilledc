@@ -1,8 +1,7 @@
-@extends('layouts.app')
+ @extends('layouts.app')
 
-@section('content')
-    <!-- <x-header></x-header> -->
-    <style>
+@section('content')   
+ <style>
         .container {
             color: #05132d;
             margin-top: 50px;
@@ -38,6 +37,5 @@
 
     </div>
     <x-footer></x-footer>
-
-    @endsection
+ @endsection
     
