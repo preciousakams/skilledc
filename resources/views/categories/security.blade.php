@@ -54,8 +54,8 @@
 
     <!-- <section class="jumbotron text-center"> -->
     <div class="container text-center">
-      <h1 class="jumbotron-heading">Corporate Services</h1>
-      <p class="lead text-muted">List of Service providers in the Corporate Service category </p>
+      <h1 class="jumbotron-heading">Private Security Services</h1>
+      <p class="lead text-muted">List of Service providers in the Private Security Service category </p>
     </div>
     <!-- </section> -->
 

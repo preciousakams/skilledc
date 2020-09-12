@@ -18,13 +18,19 @@
 
         .nav-item {
             font-size: 17px;
+            
         }
-        
+        .tester{
+            margin-left: 10%;
+        }
+        /* .navs{
+            margin-right: 22%;
+        } */
     </style>
 
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-            <div class="">
+            <div class="" style="padding-right: 10%;">
                 <a class="navbar-brand" href="/"><img src="https://res.cloudinary.com/wonderwoman/image/upload/v1590940835/myportfolio/logo_r6k0el.jpg"></a>
             </div>
             <div class="container">
@@ -35,24 +41,22 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                   
                     <ul class="navbar-nav justify-content-center" style=" font-weight: bold;
                          font-size: 20px;">
-                        <li class="nav-item ">
+                        <li class="nav-item" style="padding-right:2%;">
                             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about">About Us</a>
+                       
+                        <li class="nav-item dropdown" style="padding-right:2%;">
+                            <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">About Us</a>
+                                <a class="dropdown-item" href="/team">Meet The Team</a>
+                                <a class="dropdown-item" href="/howItWorks">How It Works</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/team">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/howItWorks">How It Works</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact">Contact Us</a>
-                        </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" style="padding-right:2%;">
                             <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Service Providers</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="/tech">Science And Technological Services</a>
@@ -76,19 +80,25 @@
                                 <a class="dropdown-item" href="/distribution">Transportation, Distribution And Logistics</a>
                             </div>
                         </li>
-                        <li class="nav-item">
+
+                        <li class="nav-item" style="padding-right:2%">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item" style="padding-right:2%;">
                             <a class="nav-link" href="/testimonial">Testimonials</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" style="padding-right:2%;">
                             <a class="nav-link" href="/faq">FAQ</a>
                         </li>
                     </ul>
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav justify-content-right" style=" font-weight: bold;
+               
+                    <div class="tester">
+                      <!-- Right Side Of Navbar -->
+                      <ul class=" navbar-nav justify-content-right" style=" font-weight: bold;
                         font-size: 20px;">
                         <!-- Authentication Links -->
                         @guest
-                        <li class="nav-item">
+                        <li class="nav-item" style="padding-right:2%;">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
@@ -120,8 +130,8 @@
                             </div>
                         </li>
                         @endguest
-                    </ul>
-
+                       </ul>
+                    </div>
                 </div>
         </nav>
 

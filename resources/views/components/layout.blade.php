@@ -10,6 +10,7 @@
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
 
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">

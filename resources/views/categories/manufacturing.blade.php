@@ -54,9 +54,9 @@
 
     <!-- <section class="jumbotron text-center"> -->
     <div class="container text-center">
-      <h1 class="jumbotron-heading">Corporate Services</h1>
-      <p class="lead text-muted">List of Service providers in the Corporate Service category </p>
-    </div>
+      <h1 class="jumbotron-heading">Manufacturing  Services</h1>
+      <p class="lead text-muted">List of Service providers in the Manufacturing  Service category </p>
+    </div>o
     <!-- </section> -->
 
     <div class="album py-5 bg-light">

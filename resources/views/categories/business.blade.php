@@ -54,8 +54,8 @@
 
     <!-- <section class="jumbotron text-center"> -->
     <div class="container text-center">
-      <h1 class="jumbotron-heading">Corporate Services</h1>
-      <p class="lead text-muted">List of Service providers in the Corporate Service category </p>
+      <h1 class="jumbotron-heading">Business Management And Administrative Services</h1>
+      <p class="lead text-muted">List of Service providers in the Business Management And Administrative Service category </p>
     </div>
     <!-- </section> -->
 

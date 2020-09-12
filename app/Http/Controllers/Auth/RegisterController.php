@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'phone' => ['required', 'numeric', 'min:11'],
             'lastname' => ['required', 'string', 'max:255'],
             'location' => ['required', 'string', 'max:255'],
+            'category' => ['required', 'string', 'max:255'],
         ]);
     }
 
@@ -74,6 +75,7 @@ class RegisterController extends Controller
             'phone' => $data['phone'],
             'lastname' =>$data['lastname'],
             'location' =>$data['location'],
+            'category' =>$data['category'],
         ]);
     }
 }

@@ -38,7 +38,8 @@ class UserController extends Controller
                     'lastname' => 'required|min:2',
                     'email' => 'required|email',
                     'phone' => 'required|min:11',
-                    'location' => 'required|min:2'
+                    'location' => 'required|min:2',
+                    'category' => 'required'
                 ]);
             } else {
                 $validate = $request->validate([
@@ -46,7 +47,8 @@ class UserController extends Controller
                     'lastname' => 'required|min:2',
                     'email' => 'required|email|unique:users',
                     'phone' => 'required|min:11',
-                    'location' => 'required|min:2'
+                    'location' => 'required|min:2',
+                    'category' => 'required'
                 ]);
             }
 
@@ -56,6 +58,7 @@ class UserController extends Controller
                 $user->email = $request['email'];
                 $user->phone = $request['phone'];
                 $user->location = $request['location'];
+                $user ->category = $request['category'];
 
                 $user->save();
                 $request->session()->flash('success', 'Your Details Have Been Updated');
@@ -68,7 +71,7 @@ class UserController extends Controller
         }
     }
 
-  
+
     public function profile($id)
     {
 
@@ -80,4 +83,8 @@ class UserController extends Controller
             return redirect()->back();
         }
     }
+
+
+
+    
 }

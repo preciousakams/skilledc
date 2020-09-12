@@ -12,17 +12,14 @@
     </style>
     <div class="container">
         <div class="row profile">
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <a><img src="https://res.cloudinary.com/wonderwoman/image/upload/v1591141936/placeholderWoman.png" class="rounded float-right" alt="..."></a>
             </div>
-            <div class="col-sm-5">
+            <div class="col-sm-6">
                 <h3><strong> FullName: </strong>{{$user->name}} {{$user->lastname}}</h3>
                 <h3><strong> Business Location: </strong> {{$user->location}}</h3>
-                <h3 style="text-align: center"><strong> Areas Of Specialty: </strong></h3>
-                <h4>Lorem ipsum dolor sit amet con
-                    <br> Lorem ipsum dolor sit amet con <br>
-                    Lorem ipsum dolor sit amet con.
-                </h4>
+                <h3><strong> Area Of Specialty: </strong> {{$user->category}}
+             </h3>
                 <h3 style="color: #92802E"><strong style="color: #05132d">Verification Type :</strong> On Site</h3>
                 <h3> <strong>Vendor Rating: </strong> </h3>
                 <a><img src="images/GOLD.png"></a>
