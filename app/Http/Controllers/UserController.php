@@ -30,7 +30,7 @@ class UserController extends Controller
         $user = User::find(Auth::user()->id);
 
         if ($user) {
-            $validate = null;
+            // $validate = null;
             if (Auth::user()->email === $request['email']) {
 
                 $validate = $request->validate([
@@ -39,7 +39,8 @@ class UserController extends Controller
                     'email' => 'required|email',
                     'phone' => 'required|min:11',
                     'location' => 'required|min:2',
-                    'category' => 'required'
+                    'category' => 'required',
+                       'aboutven' => 'required'
                 ]);
             } else {
                 $validate = $request->validate([
@@ -48,24 +49,27 @@ class UserController extends Controller
                     'email' => 'required|email|unique:users',
                     'phone' => 'required|min:11',
                     'location' => 'required|min:2',
-                    'category' => 'required'
+                    'category' => 'required',
+                    'aboutven' => 'required'
                 ]);
             }
 
-            if ($validate) {
+            // if ($validate) {
                 $user->name = $request['name'];
                 $user->lastname = $request['lastname'];
                 $user->email = $request['email'];
                 $user->phone = $request['phone'];
                 $user->location = $request['location'];
                 $user ->category = $request['category'];
+                $user ->aboutven = $request['aboutven'];
+
 
                 $user->save();
                 $request->session()->flash('success', 'Your Details Have Been Updated');
                 return redirect()->back();
-            } else {
-                return redirect()->back();
-            }
+        //     } else {
+        //         return redirect()->back();
+        //     }
         } else {
             return redirect()->back();
         }

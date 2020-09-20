@@ -134,6 +134,9 @@ Route::get('/profile', function () {
     return view('user.profile');
 })->middleware('verified' ) ;
 
+// Route::get('/aboutven', function () {
+//     return view('aboutven');
+// });
 
 Auth::routes(['verify' => true]);
 

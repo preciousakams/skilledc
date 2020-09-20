@@ -99,17 +99,15 @@
         /* padding-top: 1rem; */
     }
 
-    select{
-        
-        width: 98%;
+    select {
+
+        width: 100%;
         margin-top: 5px;
         border: solid transparent;
-        border-top-left-radius: 4.25rem;
-        border-bottom-right-radius: 4.25rem;
         color: #05132d;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         padding: 20px;
-}
+    }
 </style>
 
 <div class="container">
@@ -117,16 +115,16 @@
         <div class="head">
             <header>
                 <h1>Update Profile</h1>
-
             </header>
         </div>
         <div class="main">
 
-            <form method="POST" action="{{ route('user.update') }}">
+            <form method="POST" action="{{ route('user.update') }}" autocomplete="on">
                 @csrf
 
+
                 @if(session('success'))
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert"> 
                     {{session('success')}}
                 </div>
                 @endif
@@ -135,7 +133,7 @@
                     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
 
                     <div class="col-md-6">
-                        <input id="name" type="text" value="{{$user['name']}}" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Your First Name">
+                        <input  id="name" value="{{ $user['name']}}" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Your First Name">
 
                         @error('name')
                         <span class="invalid-feedback" role="alert">
@@ -150,7 +148,7 @@
 
                     <div class="col-md-6">
 
-                        <input type="text" value="{{$user['lastname']}}" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus placeholder="Your Last Name">
+                        <input  type="text" value="{{ $user['lastname']}}" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus placeholder="Your Last Name">
                         @error('lastname')
 
                         <span class="invalid-feedback" role="alert">
@@ -164,7 +162,7 @@
                     <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                     <div class="col-md-6">
-                        <input id="email" type="email" value="{{$user['email']}}" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Your Email Address">
+                        <input  id="email" value="{{ $user['email']}}" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Your Email Address">
 
                         @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -178,7 +176,7 @@
                     <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
                     <div class="col-md-6">
-                        <input id="phone" value="{{$user['phone']}}" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Your Phone Number">
+                        <input  id="phone" value="{{ $user['phone']}}" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus placeholder="Your Phone Number">
 
                         @error('phone')
                         <span class="invalid-feedback" role="alert">
@@ -193,8 +191,7 @@
 
                     <div class="col-md-6">
 
-                        <input type="text" value="{{$user['location']}}" class="form-control @error('location') is-invalid @enderror" name="location" value="{{ old('location') }}"
-                         required autocomplete="Your Business location" placeholder="Your Business Location">
+                        <input  type="text" value="{{ $user['location']}}" class="form-control @error('location') is-invalid @enderror" name="location" value="{{ old('location') }}" required autocomplete="Your Business location" autofocus placeholder="Your Business Location">
                         @error('location')
 
                         <span class="invalid-feedback" role="alert">
@@ -203,36 +200,51 @@
                         @enderror
                     </div>
                 </div>
+                <!-- ////////////////////////////////////////////////// -->
+                <div class="form-group row">
+                    <label for="category"   class="col-md-4 col-form-label text-md-right">{{ __('Area Of Specialty') }}</label>
+
+                    <div class="col-md-6">
+                        <select name="category" value="{{ $user['category']}}">
+                            <option value="" disabled selected>Select Your Area Of Specialty</option>
+                            <Option value=" Science And Technological Services"> Science And Technological Services </Option>
+                            <Option value=" Fitness And Wellness"> Fitness And Wellness </Option>
+                            <Option value=" Educational Services"> Educational Services </Option>
+                            <Option value=" Corporate Services"> Corporate Services </Option>
+                            <Option value=" Arts And Crafts Technicians"> Arts And Crafts Technicians </Option>
+                            <Option value=" Furniture And Fixtures"> Furniture And Fixtures </Option>
+                            <Option value=" Repairs And Technical Support"> Repairs And Technical Support </Option>
+                            <Option value=" Private Security Services"> Private Security Services </Option>
+                            <Option value=" Event Handlers"> Event Handlers </Option>
+                            <Option value=" Installation Technicians"> Installation Technicians </Option>
+                            <Option value=" Beauty And Lifestyle "> Beauty And Lifestyle </Option>
+                            <Option value="  Architecture And Construction "> Architecture And Construction </Option>
+                            <Option value=" Business Management And Administrative Services"> Business Management And Administrative Services </Option>
+                            <Option value=" Financial Services"> Financial Services </Option>
+                            <Option value=" Hospitality And Tourism"> Hospitality And Tourism </Option>
+                            <Option value=" Law & Public Safety"> Law & Public Safety </Option>
+                            <Option value=" Manufacturing"> Manufacturing </Option>
+                            <Option value=" Marketing And Sales"> Marketing And Sales </Option>
+                            <Option value=" Transportation, Distribution And Logistics"> Transportation, Distribution And Logistics </Option>
+
+                        </select>
+                    </div>
+                </div>
 
                 <div class="form-group row">
-              <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Area Of Specialty') }}</label>
+                    <label for="aboutven"  class="col-md-4 col-form-label text-md-right">{{ __('About You') }}</label>
 
-              <div class="col-md-6">
-<select  name="category" value="{{$user['category']}}" >
-      <option value="" disabled selected>Select Your Area Of Specialty</option>
-      <Option value=" Science And Technological Services"> Science And Technological Services </Option>
-      <Option value=" Fitness And Wellness"> Fitness And Wellness </Option>
-      <Option value=" Educational Services"> Educational Services </Option>
-      <Option value=" Corporate Services"> Corporate Services </Option>
-      <Option value=" Arts And Crafts Technicians"> Arts And Crafts Technicians </Option>
-      <Option value=" Furniture And Fixtures"> Furniture And Fixtures </Option>
-      <Option value=" Repairs And Technical Support"> Repairs And Technical Support </Option>
-      <Option value=" Private Security Services"> Private Security Services </Option>
-      <Option value=" Event Handlers"> Event Handlers </Option>
-      <Option value=" Installation Technicians"> Installation Technicians </Option>
-      <Option value=" Beauty And Lifestyle "> Beauty And Lifestyle  </Option>
-      <Option value="  Architecture And Construction ">  Architecture And Construction  </Option>
-      <Option value=" Business Management And Administrative Services"> Business Management And Administrative Services </Option>
-      <Option value=" Financial Services"> Financial Services </Option>
-      <Option value=" Hospitality And Tourism"> Hospitality And Tourism </Option>
-      <Option value=" Law & Public Safety"> Law & Public Safety </Option>
-      <Option value=" Manufacturing"> Manufacturing </Option>
-      <Option value=" Marketing And Sales"> Marketing And Sales </Option>
-      <Option value=" Transportation, Distribution And Logistics"> Transportation, Distribution And Logistics </Option>
+                    <div class="col-md-6">
+                     <textarea  id="aboutven" value="{{ $user['aboutven']}}" type="text" class="form-control @error('aboutven') is-invalid @enderror" name="aboutven" value="{{ old('aboutven') }}" required placeholder="Tell Us About You And Your Business"></textarea>
 
-    </select>
-              </div>
-       </div>
+                        @error('aboutven')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+                <!-- ////////////////////////////////////////////// -->
 
                 <div class="form-group row mb-0">
                     <div class="col-md-6 offset-md-4">
@@ -242,22 +254,11 @@
                     </div>
                 </div>
             </form>
-
         </div>
     </div>
 </div>
 <div class="last"></div>
 
 
-<?php
-    if(isset($_POST['submit'])){
-    if(!empty($_POST['Fruit'])) {
-        $selected = $_POST['Fruit'];
-        echo 'You have chosen: ' . $selected;
-    } else {
-        echo 'Please select the value.';
-    }
-    }
-?>
 
 @endsection

@@ -25,19 +25,16 @@
                 <a><img src="images/GOLD.png"></a>
             </div>
             <div class="col-sm-4">
-                <h3 style="text-align: center"><strong> About Me </strong></h3>
-                <h4> brief sales pitch. Lorem ipsum dolor, sit amet <br>
-                    consectetur adipisicing elit. Quo ut minima perferendis,<br>
-                    veritatis laudantium earum mollitia odio officia tempora <br>
-                    ullam consequuntur sit cum modi <br>
-                    voluptatibus dolores corrupti sunt rem cupiditate?
-                </h4>
+                <h3 style="text-align: center"><strong> About Me</strong> <br> 
+                {{$user->aboutven}}
+            </h3>
+                
             </div>
         </div>
 
     </div>
     <x-footer></x-footer>
-
+ 
 @endsection
  <script type="text/javascript">
   document.title = `{{$user->name}}'s Profile`;
