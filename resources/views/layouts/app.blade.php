@@ -3,7 +3,7 @@
     <style>
         .dropdown-menu {
             background-color:#05132d;
-            
+
         }
 
         .dropdown-item {
@@ -18,7 +18,7 @@
 
         .nav-item {
             font-size: 17px;
-            
+
         }
         .tester{
             margin-left: 10%;
@@ -41,13 +41,13 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                   
+
                     <ul class="navbar-nav justify-content-center" style=" font-weight: bold;
                          font-size: 20px;">
                         <li class="nav-item" style="padding-right:2%;">
                             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
-                       
+
                         <li class="nav-item dropdown" style="padding-right:2%;">
                             <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
                             <div class="dropdown-menu">
@@ -74,9 +74,9 @@
                                 <a class="dropdown-item" href="/business">Business Management And Administrative Services</a>
                                 <a class="dropdown-item" href="/financials">Financial Services</a>
                                 <a class="dropdown-item" href="/hospitality">Hospitality And Tourism</a>
-                                <a class="dropdown-item" href="/law&safety">Law & Public Safety</a>
+                                <a class="dropdown-item" href="/law">Law & Public Safety</a>
                                 <a class="dropdown-item" href="/manufacturing">Manufacturing</a>
-                                <a class="dropdown-item" href="/mkting&sales">Marketing And Sales</a>
+                                <a class="dropdown-item" href="/mkting">Marketing And Sales</a>
                                 <a class="dropdown-item" href="/distribution">Transportation, Distribution And Logistics</a>
                             </div>
                         </li>
@@ -91,7 +91,7 @@
                             <a class="nav-link" href="/faq">FAQ</a>
                         </li>
                     </ul>
-               
+
                     <div class="tester">
                       <!-- Right Side Of Navbar -->
                       <ul class=" navbar-nav justify-content-right" style=" font-weight: bold;

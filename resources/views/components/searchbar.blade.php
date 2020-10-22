@@ -7,13 +7,13 @@
       font-weight: bold;
       font-size: 30px;
       /* border-radius: 15px; */
-      margin: 10%; 
+      margin: 10%;
       margin-top: 220px;
       margin-left: 20%;
       border: solid transparent;
             border-top-left-radius: 1.3rem;
-            border-bottom-right-radius: 1.3rem; 
-  
+            border-bottom-right-radius: 1.3rem;
+
    }
 </style>
 
@@ -82,16 +82,16 @@
             window.location = "/hospitality";
             break;
 
-            case "law&safety":
-            window.location = "/law&safety";
+            case "law":
+            window.location = "/law";
             break;
 
             case "manufacturing":
             window.location = "/manufacturing";
             break;
 
-            case "mkting&sales":
-            window.location = "/mkting&sales";
+            case "mkting":
+            window.location = "/mkting";
             break;
 
             case "distribution":
@@ -103,9 +103,9 @@
          default:
             window.location = "/"; // if no selection matches then redirected to home page
             break;
-      } // end of switch 
+      } // end of switch
    }
-   //////////////////  
+   //////////////////
 </script>
 
 <section>
@@ -127,13 +127,13 @@
       <Option value="business">Business Management And Administrative Services</Option>
       <Option value="financials">Financial Services</Option>
       <Option value="hospitality">Hospitality And Tourism</Option>
-      <Option value="law&safety">Law & Public Safety</Option>
+      <Option value="law">Law & Public Safety</Option>
       <Option value="manufacturing">Manufacturing</Option>
-      <Option value="mkting&sales">Marketing And Sales</Option>
+      <Option value="mkting">Marketing And Sales</Option>
       <Option value="distribution">Transportation, Distribution And Logistics</Option>
 
 
    </SELECT>
-</section> 
+</section>
 
 

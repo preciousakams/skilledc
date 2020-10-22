@@ -127,7 +127,7 @@
                     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
 
                     <div class="col-md-6">
-                        <input  id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" 
+                        <input  id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
                         value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="Your First Name">
 
                         @error('name')
@@ -193,7 +193,7 @@
                     <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
                     <div class="col-md-6">
-                        <input  id="phone" type="text" class="form-control @error('phone') 
+                        <input  id="phone" type="text" class="form-control @error('phone')
                         is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone"  placeholder="Your Phone Number">
 
                         @error('phone')
@@ -209,7 +209,7 @@
 
                     <div class="col-md-6">
 
-                        <input  type="text" class="form-control @error('location') is-invalid @enderror" 
+                        <input  type="text" class="form-control @error('location') is-invalid @enderror"
                         name="location" value="{{ old('location') }}" required autocomplete="Your Business location"  placeholder="Your Business Location">
                         @error('location')
 
@@ -220,35 +220,41 @@
                     </div>
                 </div>
                 <!-- ////////////////////////////////////////////////// -->
+
+
+                <!-- ////////////////////////tryout/////////////////////////////// -->
                 <div class="form-group row">
                     <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Area Of Specialty') }}</label>
 
                     <div class="col-md-6">
                         <select name="category">
                             <option value="" disabled selected>Select Your Area Of Specialty</option>
-                            <Option value=" Science And Technological Services"> Science And Technological Services </Option>
+                            <Option value=" Science And Technological Service"> Science And Technological Services </Option>
                             <Option value=" Fitness And Wellness"> Fitness And Wellness </Option>
-                            <Option value=" Educational Services"> Educational Services </Option>
-                            <Option value=" Corporate Services"> Corporate Services </Option>
-                            <Option value=" Arts And Crafts Technicians"> Arts And Crafts Technicians </Option>
-                            <Option value=" Furniture And Fixtures"> Furniture And Fixtures </Option>
+                            <Option value=" Educational Service"> Educational Services </Option>
+                            <Option value=" Corporate Service"> Corporate Services </Option>
+                            <Option value=" Arts And Crafts Technician"> Arts And Crafts Technicians </Option>
+                            <Option value=" Furniture And Fixture"> Furniture And Fixtures </Option>
                             <Option value=" Repairs And Technical Support"> Repairs And Technical Support </Option>
-                            <Option value=" Private Security Services"> Private Security Services </Option>
+                            <Option value=" Private Security Service"> Private Security Services </Option>
                             <Option value=" Event Handlers"> Event Handlers </Option>
-                            <Option value=" Installation Technicians"> Installation Technicians </Option>
+                            <Option value=" Installation Technician"> Installation Technicians </Option>
                             <Option value=" Beauty And Lifestyle "> Beauty And Lifestyle </Option>
                             <Option value="  Architecture And Construction "> Architecture And Construction </Option>
-                            <Option value=" Business Management And Administrative Services"> Business Management And Administrative Services </Option>
-                            <Option value=" Financial Services"> Financial Services </Option>
+                            <Option value=" Business Management And Administrative Service"> Business Management And Administrative Services </Option>
+                            <Option value=" Financial Service"> Financial Services </Option>
                             <Option value=" Hospitality And Tourism"> Hospitality And Tourism </Option>
                             <Option value=" Law & Public Safety"> Law & Public Safety </Option>
                             <Option value=" Manufacturing"> Manufacturing </Option>
-                            <Option value=" Marketing And Sales"> Marketing And Sales </Option>
+                            <Option value=" Marketing And Sale"> Marketing And Sales </Option>
                             <Option value=" Transportation, Distribution And Logistics"> Transportation, Distribution And Logistics </Option>
 
                         </select>
                     </div>
                 </div>
+
+
+                <!-- //////////////////////////end tryout///////////////////////// -->
 
                 <div class="form-group row">
                     <label for="aboutven" class="col-md-4 col-form-label text-md-right">{{ __('About You') }}</label>

@@ -3,7 +3,7 @@
     <style>
         .dropdown-menu {
             background-color:#05132d;
-            
+
         }
 
         .dropdown-item {
@@ -19,7 +19,7 @@
         .nav-item {
             font-size: 17px;
         }
-        
+
     </style>
 
     <div id="app">
@@ -70,9 +70,9 @@
                                 <a class="dropdown-item" href="/business">Business Management And Administrative Services</a>
                                 <a class="dropdown-item" href="/financials">Financial Services</a>
                                 <a class="dropdown-item" href="/hospitality">Hospitality And Tourism</a>
-                                <a class="dropdown-item" href="/law&safety">Law & Public Safety</a>
+                                <a class="dropdown-item" href="/law">Law & Public Safety</a>
                                 <a class="dropdown-item" href="/manufacturing">Manufacturing</a>
-                                <a class="dropdown-item" href="/mkting&sales">Marketing And Sales</a>
+                                <a class="dropdown-item" href="/mkting">Marketing And Sales</a>
                                 <a class="dropdown-item" href="/distribution">Transportation, Distribution And Logistics</a>
                             </div>
                         </li>
