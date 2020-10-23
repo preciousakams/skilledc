@@ -56,7 +56,7 @@
 
       #click{
           /* background-color:#05132d; */
-          color: #92802E;
+          color: #12729e;
           padding-left: 50px;
           font-weight: bolder;
           padding-top: 15px;
@@ -102,7 +102,6 @@
 }
 
 
-
  </style>
 
 <main role="main">
@@ -135,13 +134,14 @@
                        <i class="fas fa-certificate"></i>
                      </div>
                  </div>
-                 <div> <a href="home" id="click" class="tracking-in-expand-fwd">Click For More </a></div>
+                <div> <a href="{{route('user.profile', $user-> id ) }}" id="click" class="tracking-in-expand-fwd">Click For More </a></div>
                </div>
              </div>
            </div>
            @endforeach
          </div>
        </div>
+
 
     </main>
     <x-footer></x-footer>

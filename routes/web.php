@@ -134,6 +134,11 @@ Route::get('/profile', function () {
     return view('user.profile');
 })->middleware('verified');
 
+Route::get('/Register', function () {
+    return view('landingPage');
+});
+
+
 // Route::get('/trynew', function () {
 //     return view('trynew');
 // });
@@ -172,7 +177,9 @@ Route::get('/repair', 'UserController@repair')->name('categories.repair');
 Route::get('/security', 'UserController@security')->name('categories.security');
 Route::get('/tech', 'UserController@tech')->name('categories.tech');
 
-
+// Seeding////////////////////////////////////////////////////////////
 // Route::get('/testdata', function() {
 //     factory(App\User::class,10)->create();
 // });
+
+Route::get('/add-to-cart/{user}', 'CartController@add')->name('cart.add');
