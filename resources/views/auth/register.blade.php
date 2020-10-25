@@ -219,10 +219,7 @@
                         @enderror
                     </div>
                 </div>
-                <!-- ////////////////////////////////////////////////// -->
 
-
-                <!-- ////////////////////////tryout/////////////////////////////// -->
                 <div class="form-group row">
                     <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Area Of Specialty') }}</label>
 
@@ -252,9 +249,6 @@
                         </select>
                     </div>
                 </div>
-
-
-                <!-- //////////////////////////end tryout///////////////////////// -->
 
                 <div class="form-group row">
                     <label for="aboutven" class="col-md-4 col-form-label text-md-right">{{ __('About You') }}</label>

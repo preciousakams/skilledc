@@ -90,6 +90,9 @@ Route::get('/construction', function () {
     return view('categories.construction');
 })->middleware('verified');
 
+Route::get('/landingpage', function () {
+    return view('landingPage');
+});
 
 Route::get('/register', function () {
     return view('auth.register');
