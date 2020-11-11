@@ -51,9 +51,10 @@
                         <li class="nav-item dropdown" style="padding-right:2%;">
                             <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
                             <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/howItWorks">How It Works</a>
                                 <a class="dropdown-item" href="/about">About Us</a>
                                 <a class="dropdown-item" href="/team">Meet The Team</a>
-                                <a class="dropdown-item" href="/howItWorks">How It Works</a>
+
                             </div>
                         </li>
                         <li class="nav-item dropdown" style="padding-right:2%;">
@@ -90,6 +91,7 @@
                         <li class="nav-item" style="padding-right:2%;">
                             <a class="nav-link" href="/faq">FAQ</a>
                         </li>
+
                     </ul>
 
                     <div class="tester">
@@ -99,11 +101,28 @@
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item" style="padding-right:2%;">
+                            <a class="nav-link" href="/loginPage">{{ __('Login') }}</a>
+                        </li>
+                        @if (Route::has('login || client.login'))
+
+                        <li class="nav-item" style="padding-right:2%;">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
-                        @if (Route::has('register'))
+                        <li class="nav-item" style="padding-right:2%;">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @endif
+
+                        <li class="nav-item" style="padding-right:2%;">
+                            <a class="nav-link" href="/landingPage">{{ __('Register') }}</a>
+                        </li>
+                        @if (Route::has('register || client.register'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('client.register') }}">{{ __('Register Client') }}</a>
                         </li>
                         @endif
                         @else

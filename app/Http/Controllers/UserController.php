@@ -88,14 +88,7 @@ class UserController extends Controller
         }
     }
 
-    // public function trial()
-    // {
-    //     // $users = DB::select('select * from users where name = ?', [1]);
-    //     $users = User::all();
-
-    //     return view('trial', ['users' => $users]);
-    // }
-
+// ///////////////////?USER CATEGORY PAGES /////////////////////////
     public function corporate() {
         $users = DB::table('users')->where('category', 'Corporate Service')->get();
 

@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        You are logged in as Vendor!
+                        You are logged in as Client!
                     </div>
                 </div>
             </div>

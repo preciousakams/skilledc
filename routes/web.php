@@ -91,7 +91,7 @@ Route::get('/construction', function () {
     return view('categories.construction');
 })->middleware('verified');
 
-Route::get('/landingpage', function () {
+Route::get('/landingPage', function () {
     return view('landingPage');
 });
 
@@ -124,12 +124,17 @@ Route::get('/contact', function () {
 Route::get('/howItWorks', function () {
     return view('mainpage.howItWorks');
 });
-Route::get('/ven1', function () {
-    return view('vendorProfile.ven1');
+
+Route::get('/loginPage', function () {
+    return view('loginPage');
 });
-Route::get('/chat', function () {
-    return view('mainpage.chat');
-});
+
+// Route::get('/ven1', function () {
+//     return view('vendorProfile.ven1');
+// });
+// Route::get('/chat', function () {
+//     return view('mainpage.chat');
+// });
 // Route::get('/vendor', function () {
 //     return view('vendor');
 // })->middleware('verified' ) ;

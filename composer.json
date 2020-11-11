@@ -15,7 +15,8 @@
         "guzzlehttp/guzzle": "^7.1",
         "laravel/framework": "^7.24",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.1"
+        "laravel/ui": "^2.4",
+        "swiftmailer/swiftmailer": "^6.0"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.9.1",

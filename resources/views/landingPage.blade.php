@@ -86,16 +86,16 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="row">
         <div class="col-sm-6 ">
             <h1>
-             Are you a client searching for creditble professionals?
+             Are You A Client Searching For Creditble Professionals?
              </h1>
         </div>
         <div class="col-sm-6 ">
             <h1>
-             Are you a professional, intending to render a service?
+             Are You A Professional, Intending To Render A Service?
             </h1>
         </div>
         <div class="col-sm-6" >
-            <a href="{{route('register')}} "> Register Here </a>
+            <a href="{{route('client.register')}} "> Register Here </a>
         </div>
         <div class="col-sm-6">
             <a href="{{route('register')}} "> Register Here </a>
