@@ -158,7 +158,7 @@
                             {{ __('Login') }}
                         </button>  <br>
                         <h6 id="abtn">
-                        <a href="{{route ('admin.register' )}} " id="regbtn"> Click Here To Register</a>
+                        <a href="{{route ('client.register' )}} " id="regbtn"> Click Here To Register</a>
 
                         @if (Route::has('password.request'))
                         <a class="btn btn-link" href="{{ route('password.request') }}" style="color:#92802E">
