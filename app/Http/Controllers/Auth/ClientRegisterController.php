@@ -33,6 +33,6 @@ class ClientRegisterController extends Controller
         $request['password'] = Hash::make($request->password);
         client::create($request->all());
 
-        return redirect()->intended(route('client.dashboard'));
+        return redirect()->intended(route('client.profile'));
     }
 }

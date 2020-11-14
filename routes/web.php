@@ -195,7 +195,7 @@ Route::get('/add-to-cart/{user}', 'CartController@add')->name('cart.add');
 
 // Admin routes
 Route::prefix('admin')->group(function(){
-    Route::get('/', 'Users\Admin\AdminController@index')->name('admin.dashboard');
+    Route::get('/', 'Users\Admin\AdminController@index')->name('admin.profile');
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/register', 'Auth\AdminRegisterController@showRegisterForm')->name('admin.register');
@@ -205,9 +205,26 @@ Route::prefix('admin')->group(function(){
 
 // client routes
 Route::prefix('client')->group(function(){
-    Route::get('/', 'Users\Client\ClientController@index')->name('client.dashboard');
+    Route::get('/', 'Users\Client\ClientController@index')->name('client.profile');
     Route::get('/login', 'Auth\ClientLoginController@showLoginForm')->name('client.login');
     Route::post('/login', 'Auth\ClientLoginController@login')->name('client.login.submit');
     Route::get('/register', 'Auth\ClientRegisterController@showRegisterForm')->name('client.register');
     Route::post('/register', 'Auth\ClientRegisterController@register')->name('client.register.submit');
 });
+
+
+// Route::get('/admin/{id}', 'Users\Admin\AdminController@profile')->name('admin.profile');
+
+Route::get('/edit/admin/', 'Users\Admin\AdminController@edit')->name('admin.edit');
+
+Route::post('/edit/admin/', 'Users\Admin\AdminController@update')->name('admin.update');
+/////////////////////////////////// client//////////////////////////
+
+// Route::get('/admin/{id}', 'Users\Admin\AdminController@profile')->name('admin.profile');
+
+Route::get('/edit/client/', 'Users\Client\ClientController@edit')->name('client.edit');
+
+Route::post('/edit/client/', 'Users\Client\ClientController@update')->name('client.update');
+
+
+

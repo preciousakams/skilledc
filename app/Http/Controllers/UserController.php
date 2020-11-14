@@ -30,7 +30,7 @@ class UserController extends Controller
         $user = User::find(Auth::user()->id);
 
         if ($user) {
-            // $validate = null;
+            $validate = null;
             if (Auth::user()->email === $request['email']) {
 
                 $validate = $request->validate([
@@ -54,7 +54,7 @@ class UserController extends Controller
                 ]);
             }
 
-            // if ($validate) {
+            if ($validate) {
                 $user->name = $request['name'];
                 $user->lastname = $request['lastname'];
                 $user->email = $request['email'];
@@ -67,9 +67,9 @@ class UserController extends Controller
                 $user->save();
                 $request->session()->flash('success', 'Your Details Have Been Updated');
                 return redirect()->back();
-        //     } else {
-        //         return redirect()->back();
-        //     }
+            } else {
+                return redirect()->back();
+            }
         } else {
             return redirect()->back();
         }
