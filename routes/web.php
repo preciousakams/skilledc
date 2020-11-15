@@ -218,13 +218,18 @@ Route::prefix('client')->group(function(){
 Route::get('/edit/admin/', 'Users\Admin\AdminController@edit')->name('admin.edit');
 
 Route::post('/edit/admin/', 'Users\Admin\AdminController@update')->name('admin.update');
+Route::get('/edit/password/admin/', 'Users\Admin\AdminController@passwordEdit')->name('adminpassword.edit');
+
+Route::post('/edit/password/admin/', 'Users\Admin\AdminController@passwordUpdate')->name('adminpassword.update');
 /////////////////////////////////// client//////////////////////////
 
-// Route::get('/admin/{id}', 'Users\Admin\AdminController@profile')->name('admin.profile');
+// Route::get('/client/{id}', 'Users\Client\ClientController@profile')->name('client.profile');
 
 Route::get('/edit/client/', 'Users\Client\ClientController@edit')->name('client.edit');
 
 Route::post('/edit/client/', 'Users\Client\ClientController@update')->name('client.update');
+Route::get('/edit/password/client/', 'Users\Client\ClientController@passwordEdit')->name('password.edit');
 
+Route::post('/edit/password/client/', 'Users\Client\ClientController@passwordUpdate')->name('password.update');
 
 
