@@ -21,3 +21,8 @@
         </div>
     </div>
 @endsection
+
+{{-- <script type="text/javascript">
+    document.title = `{{$user->name}}'s Profile`;
+  </script>
+   --}}
