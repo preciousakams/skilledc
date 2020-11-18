@@ -90,18 +90,18 @@ class UserController extends Controller
 
 // ///////////////////?USER CATEGORY PAGES /////////////////////////
     public function corporate() {
-        $users = DB::table('users')->where('category', 'Corporate Service')->get();
+        $users = DB::table('users')->where('category', 'Corporate Services')->get();
 
         return view('categories.corporate', ['users' => $users]);
     }
     public function business() {
-        $users = DB::table('users')->where('category', 'Business Management And Administrative Service')->get();
+        $users = DB::table('users')->where('category', 'Business Management And Administrative Services')->get();
 
         return view('categories.business', ['users' => $users]);
     }
 
     public function installation() {
-        $users = DB::table('users')->where('category', 'Installation Technician')->get();
+        $users = DB::table('users')->where('category', 'Installation Technicians')->get();
 
         return view('categories.installation', ['users' => $users]);
     }
@@ -111,7 +111,7 @@ class UserController extends Controller
         return view('categories.event', ['users' => $users]);
     }
     public function security() {
-        $users = DB::table('users')->where('category', 'Private Security Service')->get();
+        $users = DB::table('users')->where('category', 'Private Security Services')->get();
 
         return view('categories.security', ['users' => $users]);
     }
@@ -121,17 +121,17 @@ class UserController extends Controller
         return view('categories.repair', ['users' => $users]);
     }
     public function furniture() {
-        $users = DB::table('users')->where('category', 'Furniture And Fixture')->get();
+        $users = DB::table('users')->where('category', 'Furniture And Fixtures')->get();
 
         return view('categories.furniture', ['users' => $users]);
     }
     public function crafts() {
-        $users = DB::table('users')->where('category', 'Arts And Crafts Technician')->get();
+        $users = DB::table('users')->where('category', 'Arts And Crafts Technicians')->get();
 
         return view('categories.crafts', ['users' => $users]);
     }
     public function education() {
-        $users = DB::table('users')->where('category', 'Educational Service')->get();
+        $users = DB::table('users')->where('category', 'Educational Services')->get();
 
         return view('categories.education', ['users' => $users]);
     }
@@ -141,17 +141,17 @@ class UserController extends Controller
         return view('categories.fitness', ['users' => $users]);
     }
     public function tech() {
-        $users = DB::table('users')->where('category', 'Science And Technological Service')->get();
+        $users = DB::table('users')->where('category', 'Science And Technological Services')->get();
 
         return view('categories.tech', ['users' => $users]);
     }
     public function distribution() {
-        $users = DB::table('users')->where('category', 'Transportation, Distribution And Logistic')->get();
+        $users = DB::table('users')->where('category', 'Transportation, Distribution And Logistics')->get();
 
         return view('categories.distribution', ['users' => $users]);
     }
     public function mkting() {
-        $users = DB::table('users')->where('category', 'Marketing And Sale')->get();
+        $users = DB::table('users')->where('category', 'Marketing And Sales')->get();
 
         return view('categories.mkting', ['users' => $users]);
     }
@@ -171,7 +171,7 @@ class UserController extends Controller
         return view('categories.hospitality', ['users' => $users]);
     }
     public function financials() {
-        $users = DB::table('users')->where('category', 'Financial Service')->get();
+        $users = DB::table('users')->where('category', 'Financial Services')->get();
 
         return view('categories.financials', ['users' => $users]);
     }
