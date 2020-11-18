@@ -56,51 +56,19 @@
 
       #click{
           /* background-color:#05132d; */
-          color: #12729e;
+          color: #05132d ;
           padding-left: 50px;
           font-weight: bolder;
           padding-top: 15px;
+          font-size: 15px;
+          animation-name: textAnime;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
       }
 
-      .tracking-in-expand-fwd {
-	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite both;
-	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite both;
+@keyframes textAnime {
+  50%   {color: #92802E;}
 }
-
-
- @-webkit-keyframes tracking-in-expand-fwd {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px);
-            transform: translateZ(-700px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand-fwd {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px);
-            transform: translateZ(-700px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    opacity: 1;
-  }
-}
-
 
  </style>
 
