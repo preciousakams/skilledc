@@ -6,12 +6,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Admin;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth:admin');
+
     }
 
     public function index()
@@ -76,4 +78,54 @@ class AdminController extends Controller
             return redirect()->back();
         }
     }
+
+    public function passwordUpdate(Request $request) {
+        $validate = $request->validate([
+            'oldPassword' => 'required|min:8',
+            'password' => 'required|min:8|required_with:password_confirmation'
+
+        ]);
+           $admin = Admin::find(Auth::user()->id);
+
+           if($admin) {
+               if(Hash::check($request['oldPassword'], $admin->password) && $validate) {
+                    $admin->password = Hash::make($request['password']);
+
+                    $admin->save();
+
+                    $request->session()->flash('success', 'Your Password Have Been Updated ');
+                return redirect()->back();
+
+               } else {
+                $request->session()->flash('error', 'The Entered Password Does Not Match Your Current Password');
+                return redirect()->route('password.edit');
+               }
+
+           }
+
+       }
+       public function passwordEdit() {
+
+        if (Auth::user()) {
+
+                return view('admin.password');
+            } else {
+                return redirect()->back();
+            }
+        }
+
+        public function profile($id)
+        {
+
+            $admin = Admin::find($id);
+
+            if ($admin) {
+                return view('admin.profile')->withUser($admin);
+            } else {
+                return redirect()->back();
+            }
+        }
+
+
+
 }
