@@ -48695,6 +48695,7 @@ Did you mean one of these?
 "}
 =======
 "} 
+<<<<<<< HEAD
 [2020-11-15 16:18:29] local.ERROR: Route [user.profile || client.profile] not defined. (View: /Users/wonderwoman/sites/skilledc/resources/views/layouts/app.blade.php) (View: /Users/wonderwoman/sites/skilledc/resources/views/layouts/app.blade.php) {"userId":4,"exception":"[object] (ErrorException(code: 0): Route [user.profile || client.profile] not defined. (View: /Users/wonderwoman/sites/skilledc/resources/views/layouts/app.blade.php) (View: /Users/wonderwoman/sites/skilledc/resources/views/layouts/app.blade.php) at /Users/wonderwoman/sites/skilledc/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:420)
 [stacktrace]
 #0 /Users/wonderwoman/sites/skilledc/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(43): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
@@ -49387,3 +49388,5 @@ Did you mean one of these?
 #55 {main}
 "} 
 >>>>>>> parent of 18b0d7b... .
+=======
+>>>>>>> parent of 3b9fe1c... updateed
