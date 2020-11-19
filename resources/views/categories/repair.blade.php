@@ -51,8 +51,23 @@
       }
       strong{
           color: #92802E;
-          font-size: px;
+
       }
+      #click{
+          /* background-color:#05132d; */
+          color: #05132d ;
+          padding-left: 50px;
+          font-weight: bolder;
+          padding-top: 15px;
+          font-size: 15px;
+          animation-name: textAnime;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+      }
+
+@keyframes textAnime {
+  50%   {color: #92802E;}
+}
     </style>
 
 <main role="main">
@@ -83,15 +98,15 @@
                    <div class="stars-inner" style="width: 43%"></div>
                    <div class="verify">Verified
                        <i class="fas fa-certificate"></i>
-                     </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           @endforeach
-         </div>
-       </div>
-
+                    </div>
+                </div>
+               <div> <a href="{{route('user.profile', $user-> id ) }}" id="click" class="tracking-in-expand-fwd">Click For More </a></div>
+              </div>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
     </main>
     <x-footer></x-footer>
      @endsection

@@ -20,6 +20,10 @@
                 font-size: 17px;
             }
 
+            .tester{
+                margin-left: 5%;
+            }
+
         </style>
 
         <div id="app">
@@ -83,6 +87,7 @@
                                 <a class="nav-link" href="/faq">FAQ</a>
                             </li>
                         </ul>
+                        <div class="tester">
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav justify-content-right" style=" font-weight: bold;
                             font-size: 20px;">
@@ -171,6 +176,7 @@
                             </li>
                             @endguest
                         </ul>
+                        </div>
 
                     </div>
             </nav>
