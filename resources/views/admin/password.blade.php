@@ -177,7 +177,7 @@
                 <div class="form-group row mb-0">
                     <div class="col-md-6 offset-md-4">
                         <button type="submit">
-                            {{ __('Create Account') }}
+                            {{ __('Update Password') }}
                         </button>
                     </div>
                 </div>

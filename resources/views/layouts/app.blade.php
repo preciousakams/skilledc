@@ -88,14 +88,32 @@
                             font-size: 20px;">
                             <!-- Authentication Links -->
                             @guest
-                            <li class="nav-item">
+                            <li class="nav-item" style="padding-right:2%;">
+                                <a class="nav-link" href="/loginPage">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('login || client.login'))
+
+                            <li class="nav-item" style="padding-right:2%;">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            @if (Route::has('register'))
+                            <li class="nav-item" style="padding-right:2%;">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @endif
+
+                            <li class="nav-item" style="padding-right:2%;">
+                                <a class="nav-link" href="/landingPage">{{ __('Register') }}</a>
+                            </li>
+                            @if (Route::has('register || client.register'))
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('client.register') }}">{{ __('Register Client') }}</a>
+                            </li>
                             @endif
+
                             @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -103,12 +121,44 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('user.profile', Auth::user()->id )}}">
+
+                                    {{-- ////////////////////////// User //////////////////////////////////// --}}
+                                    @can('isUser')
+
+                                    <a class="dropdown-item" href="{{ route('user.profile', Auth::user()->id )}}">
                                         {{ __('View Profile') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('user.edit')}}">
                                         {{ __('Edit Profile') }}
+                                        <a class="dropdown-item" href="{{ route('password.request')}}">
+                                            {{ __('Update Password') }}
+                                        </a>
                                     </a>
+                                  {{-- /////////////////           Client /////////////////////////////////////////////////// --}}
+                                    @elsecan('isClient')
+                                    <a class="dropdown-item" href="{{ route('client.profile', Auth::user()->id )}}">
+                                        {{ __('View Profile') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('client.edit')}}">
+                                        {{ __('Edit Profile') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('password.edit')}}">
+                                        {{ __('Update Password') }}
+                                    </a>
+                                    {{-- /////////////////// Admin ///////////////////////////////////////// --}}
+                                    @elsecan('isAdmin')
+
+                                    <a class="dropdown-item" href="{{ route('admin.profile', Auth::user()->id )}}">
+                                        {{ __('View Profile') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('admin.edit')}}">
+                                        {{ __('Edit Profile') }}
+                                        <a class="dropdown-item" href="{{ route('adminpassword.edit')}}">
+                                            {{ __('Update Password') }}
+                                        </a>
+                                    </a>
+                                    @endcan
+                                    {{-- //////////////// logout ////////////////////////////////// --}}
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
