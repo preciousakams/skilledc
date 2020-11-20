@@ -191,8 +191,6 @@ Route::get('/tech', 'UserController@tech')->name('categories.tech');
 //     factory(App\User::class,10)->create();
 // });
 
-Route::get('/add-to-cart/{user}', 'CartController@add')->name('cart.add');
-
 // Admin routes
 Route::prefix('admin')->group(function(){
     Route::get('/', 'Users\Admin\AdminController@index')->name('admin.profile');
