@@ -231,3 +231,18 @@ Route::get('/edit/password/client/', 'Users\Client\ClientController@passwordEdit
 Route::post('/edit/password/client/', 'Users\Client\ClientController@passwordUpdate')->name('password.update');
 
 
+Route::post('/store', 'CartController@index')->name('cart.store');
+// Route::view('cart.add','cart.add');
+
+// Route::get('cart.add', function () {
+//     if (!session()->has('data')){
+//         return redirect ('/');
+//     }
+// });
+Route::get('/add', function () {
+
+    if (!session()->has('data')){
+                return redirect ('/');
+            }
+     return view('cart.add');
+});

@@ -36,7 +36,17 @@
 
     </div>
     <div style="margin-top: 80px">
-       <a href="{{route ('cart.add', $user->id )}} "> <img src="/images/Hire me.png"> </a>
+
+        <form method="Post"  action="{{ route('cart.store') }}">
+            @csrf
+        <input type="hidden" name="name" value="{{$user->name}}"> <br/>
+        <input type="hidden" name="lastname" value="{{$user->lastname}}"> <br/>
+        <input type="hidden" name="location" value="{{$user->location}}"> <br/>
+        <input type="hidden" name="category" value="{{$user->category}}"> <br/>
+            <button type="submit" style="background-color: transparent"><img src="/images/Hire me.png"> </button>
+            </form>
+
+       {{-- <a href="{{route ('cart.add', $user->id )}} "> <img src="/images/Hire me.png"> </a> --}}
        </div>
     <x-footer></x-footer>
 
