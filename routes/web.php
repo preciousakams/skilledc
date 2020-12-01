@@ -246,3 +246,9 @@ Route::get('/add', function () {
             }
      return view('cart.add');
 });
+// Route::post('/add', 'CartController@register')->name('cart.benchmark');
+Route::post('/addbenchmark', 'CartController@create')->name('cart.benchmark');
+
+// Route::get('/wip', function () {
+//     return view('cart.wip');
+// });

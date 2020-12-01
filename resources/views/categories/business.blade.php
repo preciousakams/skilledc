@@ -86,9 +86,9 @@
          <div class="row">
 
             @foreach ($users as $user)
-           <div class="col-sm-6 col-md-4 col-lg-3">
+           <div class="col-sm-6 col-md-3 col-lg-3">
              <div class="card mb-2 box-shadow">
-               <img class="card-img-top" src="images/avatar.png" alt="Card image cap">
+               <img class="card-img-top" src={{$user->userImage}} alt="Card image cap">
                <div class="card-body">
                  <p class="card-text"> <strong>Name:</strong> {{$user->name}} {{$user->lastname}} </p>
                  <p class="card-text"> <strong> Specialty: </strong> {{$user->category}} </p>

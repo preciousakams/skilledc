@@ -120,7 +120,7 @@
         </div>
         <div class="main">
 
-            <form method="POST" action="{{ route('client.register.submit') }}" autocomplete="on">
+            <form method="POST" action="{{ route('client.register.submit') }}" autocomplete="on" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-group row">
@@ -219,6 +219,21 @@
                         @enderror
                     </div>
                 </div>
+                {{-- <div class="form-group row">
+                    <label for="clientImage" class="col-md-4 col-form-label text-md-right">Upload Profile Image
+                        <br> <span class="text-small text-info">* This is Optional</span>
+                     </label>
+
+                    <div class="col-md-6">
+                        <input type="file" class="form-control @error('clientImage') is-invalid @enderror" name="clientImage" >
+
+                        @error('clientImage')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div> --}}
 
 
                 <!-- ////////////////////////////////////////////// -->

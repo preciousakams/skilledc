@@ -58,6 +58,7 @@ class RegisterController extends Controller
             'location' => ['required', 'string', 'max:255'],
             'category' => ['required', 'string', 'max:255'],
             'aboutven' => ['required', 'string', 'min:10'],
+            'userImage' => ['sometimes','image', 'mimes:jpg,jpeg,svg.png', 'max:5000'],
         ]);
     }
 
@@ -69,6 +70,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if(request()->has('userImage')){
+            $avataruploaded = request()->file('userImage');
+            $avatarname = time() . '.' . $avataruploaded->getClientOriginalExtension();
+            $avatarpath = \public_path('/images/userImages/');
+            $avataruploaded->move($avatarpath, $avatarname);
+
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'phone' => $data['phone'],
+                'lastname' =>$data['lastname'],
+                'location' =>$data['location'],
+                'category' =>$data['category'],
+                'aboutven' =>$data['aboutven'],
+                'userImage' => '/images/userImages/' . $avatarname,
+            ]);
+        }
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row profile">
             <div class="col-sm-2">
-                <a><img src="https://res.cloudinary.com/wonderwoman/image/upload/v1591141936/placeholderWoman.png" class="rounded float-right" alt="..."></a>
+                <a><img src="{{$user->userImage}} " class="rounded float-center" alt="..."></a>
             </div>
             <div class="col-sm-6">
                 <h3><strong> FullName: </strong>{{$user->name}} {{$user->lastname}}</h3>
