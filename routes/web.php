@@ -19,77 +19,95 @@ Route::get('/', function () {
 });
 Route::get('/fitness', function () {
     return view('categories.fitness');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/lifestyle', function () {
     return view('categories.lifestyle');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/installation', function () {
     return view('categories.installation');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/event', function () {
     return view('categories.event');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/security', function () {
     return view('categories.security');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/repair', function () {
     return view('categories.repair');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/furniture', function () {
     return view('categories.furniture');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/crafts', function () {
     return view('categories.crafts');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 // Route::get('/corporate', function () {
 //     return view('categories.corporate');
-// })->middleware('verified');
+// });
+// ->middleware('verified');
 
 Route::get('/education', function () {
     return view('categories.education');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/tech', function () {
     return view('categories.tech');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/distribution', function () {
     return view('categories.distribution');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/mkting', function () {
     return view('categories.mkting');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/manufacturing', function () {
     return view('categories.manufacturing');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/law', function () {
     return view('categories.law');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/hospitality', function () {
     return view('categories.hospitality');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/financials', function () {
     return view('categories.financials');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 
 
 Route::get('/construction', function () {
     return view('categories.construction');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/landingPage', function () {
     return view('landingPage');
@@ -105,15 +123,18 @@ Route::get('/login', function () {
 
 Route::get('/testimonial', function () {
     return view('mainpage.testimonial');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/team', function () {
     return view('mainpage.team');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/about', function () {
     return view('mainpage.about');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/faq', function () {
     return view('mainpage.faq');
@@ -141,7 +162,8 @@ Route::get('/loginPage', function () {
 
 Route::get('/profile', function () {
     return view('user.profile');
-})->middleware('verified');
+});
+// ->middleware('verified');
 
 Route::get('/Register', function () {
     return view('landingPage');
