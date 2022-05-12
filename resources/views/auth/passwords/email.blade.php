@@ -1,6 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
+
+<style>
+    
+    .card{
+        margin: 20px;
+        color: #05132d;
+        text-align: center;
+        font-size: 20px;
+        background: linear-gradient(229.28deg, rgba(5, 19, 45, 0.39) 12.44%, rgba(134, 38, 150, 0.14) 29.04%, rgba(146, 128, 46, 0.37) 52.64%, rgba(5, 19, 45, 0.35) 74.56%);
+        border: 5px solid #92802E;
+        border-top-left-radius: 4.25rem;
+        border-bottom-right-radius: 4.25rem;
+    }
+    .btn{
+        color:#92802E;
+        font-size: 20px;
+        font-weight: 10px;
+        background-color: #05132d;
+        border-top-left-radius: 4rem;
+        border-bottom-right-radius: 4rem;
+    }
+    #email{
+        border-top-left-radius: 4rem;
+        border-bottom-right-radius: 4rem;
+    }
+</style>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

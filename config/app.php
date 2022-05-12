@@ -54,7 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL', null),
+    'asset_url' => env('ASSET_URL', 'https://alluring-saguaro-35637.herokuapp.com'),
 
     /*
     |--------------------------------------------------------------------------

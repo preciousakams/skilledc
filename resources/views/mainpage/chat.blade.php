@@ -1,5 +1,7 @@
-<x-layout>
-<x-header></x-header>
+@extends('layouts.app')
+
+@section('content')
+
 <style>
 .container{max-width:1170px; margin:auto;}
 img{ max-width:100%;}
@@ -283,4 +285,4 @@ img{ max-width:100%;}
       
     </div></div>
 
-</x-layout>
+@endsection

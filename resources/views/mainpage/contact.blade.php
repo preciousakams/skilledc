@@ -1,5 +1,7 @@
-<x-layout>
-    <x-header></x-header>
+@extends('layouts.app')
+
+@section('content')
+  
 
     <style>
         .contact-info .fa {
@@ -98,4 +100,4 @@
 
 
     <x-footer></x-footer>
-</x-layout>
+@endsection

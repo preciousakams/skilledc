@@ -10,6 +10,20 @@
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ asset('node_modules/tinymce/tinymce.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( "#datepicker" ).datepicker({
+        dateFormat: 'yy-mm-dd'
+      });
+    } );
+    </script>
+
+
+
+
 
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -29,12 +43,13 @@ s0.parentNode.insertBefore(s1,s0);
     <style>
         #page-container {
             background: linear-gradient(229.28deg, rgba(5, 19, 45, 0.39) 12.44%, rgba(134, 38, 150, 0.14) 29.04%, rgba(146, 128, 46, 0.37) 52.64%, rgba(5, 19, 45, 0.35) 74.56%);
-            backdrop-filter: blur(4px); 
+
+            backdrop-filter: blur(4px);
         font-family: 'Times New Roman', Times, serif;
         height: 100%;
         position: relative;
         color: #05132d;
-       
+
         min-height: 100vh;
         }
         #content-wrap {

@@ -5,7 +5,7 @@
   }
   .navbar{
     background-color: #05132d;
-    
+
   }
   .nav-item{
     font-size: 17px;
@@ -23,7 +23,7 @@
 
     <div class="collapse navbar navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav justify-content-center" style=" font-weight: bold;
-    font-size: 20px;">
+        font-size: 20px;">
         <li class="nav-item ">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
@@ -57,9 +57,9 @@
       <a class="dropdown-item" href="/business">Business Management And Administrative Services</a>
       <a class="dropdown-item" href="/financials">Financial Services</a>
       <a class="dropdown-item" href="/hospitality">Hospitality And Tourism</a>
-      <a class="dropdown-item" href="/law&safety">Law & Public Safety</a>
+      <a class="dropdown-item" href="/law">Law & Public Safety</a>
       <a class="dropdown-item" href="/manufacturing">Manufacturing</a>
-      <a class="dropdown-item" href="/mkting&sales">Marketing And Sales</a>
+      <a class="dropdown-item" href="/mkting">Marketing And Sales</a>
       <a class="dropdown-item" href="/distribution">Transportation, Distribution And Logistics</a>
         </div>
         </li>
@@ -71,14 +71,15 @@
         </li>
       </ul>
       <ul class="navbar-nav justify-content-right" style=" font-weight: bold;
-    font-size: 20px;">
-        
+      font-size: 20px;">
+
         <li class="nav-item">
           <a class="nav-link" href="/register">SignUp</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
         </li>
+
       </ul>
     </div>
   </div>
